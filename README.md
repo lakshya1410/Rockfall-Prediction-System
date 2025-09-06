@@ -1,102 +1,198 @@
-# Rockfall Prediction Command Center
+# AI-Powered Rockfall Prediction System 🚀
 
-A modern AI-powered disaster response system with real-time monitoring, risk prediction, and resource management capabilities.
+An advanced geological risk assessment and management system that combines FastAPI backend with a modern React frontend to provide real-time rockfall prediction and monitoring capabilities.
 
-## Features
+![System Status](https://img.shields.io/badge/Status-Active-brightgreen)
+![Python](https://img.shields.io/badge/Python-3.8+-blue)
+![React](https://img.shields.io/badge/React-18.0+-61dafb)
+![FastAPI](https://img.shields.io/badge/FastAPI-Latest-009688)
 
-- **Real-time Risk Monitoring**: Interactive map with color-coded risk zones
-- **AI-Powered Alerts**: NLP-processed emergency communications
-- **Resource Management**: Dynamic allocation tracking and optimization
-- **Predictive Analytics**: ML-based recommendations for preventive actions
-- **Dark Theme Dashboard**: Modern, responsive interface
+## 🌟 Features
 
-## Tech Stack
+### 🎯 **Core Functionality**
+- **Real-time Geological Risk Assessment** with AI-powered prediction models
+- **Interactive Risk Zone Mapping** using Leaflet.js with satellite imagery
+- **Dynamic Dashboard** with live monitoring and status indicators
+- **Emergency Alert System** with automated notifications
+- **Resource Management** for emergency response coordination
 
-### Backend (FastAPI)
-- FastAPI for REST API
-- Python virtual environment
-- CORS enabled for frontend integration
+### 🗺️ **Map Features**
+- **Indian Geological Focus**: Centered on coordinates 24.27°N 80.17°E
+- **Color-coded Risk Zones**: Critical, High, Medium, and Safe zone visualization
+- **Incident Markers**: Real-time geological event tracking
+- **Satellite Overlay**: High-resolution terrain analysis
+- **Interactive Popups**: Detailed risk information and incident data
 
-### Frontend (React)
-- React 18 with modern hooks
-- Tailwind CSS for styling
-- Leaflet.js for interactive maps
-- Lucide React for icons
-- Responsive design
+### 🎨 **UI/UX Excellence**
+- **Professional Dark Theme** with gradient styling
+- **Enhanced Navbar** with single-line title and compact design
+- **Responsive Layout** with sidebar navigation
+- **Real-time Status Indicators** for AI models and system health
+- **Modern Typography** with optimized spacing and readability
 
-## Setup Instructions
+## 🎯 Technology Stack
 
-### 1. Backend Setup
+### Backend
+- **FastAPI**: Modern, fast web framework for Python APIs
+- **Uvicorn**: ASGI server for running FastAPI applications
+- **Python 3.8+**: Core programming language
+- **CORS Middleware**: Cross-origin resource sharing support
 
-```powershell
-# Navigate to project directory
-cd C:\Users\LAKSHYA\Desktop\ROCKFALL
+### Frontend
+- **React 18**: Modern JavaScript framework for UI
+- **Tailwind CSS**: Utility-first CSS framework
+- **Leaflet.js**: Interactive mapping library
+- **Lucide React**: Beautiful icon library
+- **Webpack**: Module bundler and development server
 
-# Activate virtual environment
-.\myenv\Scripts\Activate.ps1
+### Development Tools
+- **Git**: Version control system
+- **npm**: Package manager for Node.js
+- **pip**: Package manager for Python
+- **Virtual Environment**: Isolated Python environment
 
-# Install Python dependencies
-pip install -r requirements.txt
+## 🚀 Quick Start
 
-# Start FastAPI server
-uvicorn main:app --reload
+### Prerequisites
+- Python 3.8 or higher
+- Node.js 16 or higher
+- npm or yarn package manager
+
+### Backend Setup (FastAPI)
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/lakshya1410/Rockfall-Prediction-System.git
+   cd Rockfall-Prediction-System
+   ```
+
+2. **Create and activate virtual environment**
+   ```bash
+   # Windows
+   python -m venv myenv
+   myenv\Scripts\activate
+
+   # Linux/Mac
+   python3 -m venv myenv
+   source myenv/bin/activate
+   ```
+
+3. **Install Python dependencies**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. **Start the FastAPI server**
+   ```bash
+   uvicorn main:app --reload --host 127.0.0.1 --port 8000
+   ```
+
+   The backend will be available at: `http://localhost:8000`
+   API documentation: `http://localhost:8000/docs`
+
+### Frontend Setup (React)
+
+1. **Navigate to frontend directory**
+   ```bash
+   cd frontend
+   ```
+
+2. **Install Node.js dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Start the React development server**
+   ```bash
+   npm start
+   ```
+
+   The frontend will be available at: `http://localhost:3000`
+
+## 🛠️ API Endpoints
+
+### Geological Risk Management
+- `GET /` - Health check endpoint
+- `GET /geological-risks` - Retrieve active geological risks
+- `POST /geological-risks` - Add new geological risk assessment
+- `GET /emergency-messages` - Get emergency notifications
+- `POST /emergency-messages` - Create emergency alert
+- `GET /resource-allocation` - Get resource distribution data
+- `POST /resource-allocation` - Allocate emergency resources
+- `GET /emergency-actions` - Retrieve recommended actions
+- `POST /emergency-actions` - Log emergency response actions
+
+## 📊 System Features
+
+### Navigation Tabs
+- **Command Center**: Main operational dashboard
+- **Data Ingestion**: Geological data input and processing
+- **Model Predicting**: AI prediction model status and results
+- **Rockfall Forecast**: Predictive analysis and forecasting
+
+### Status Monitoring
+- **DEM Model**: Digital Elevation Model processing status
+- **CNN Model**: Convolutional Neural Network analysis status
+- **Weather API**: Meteorological data integration status
+- **Seismic Monitor**: Earthquake and seismic activity tracking
+
+### Risk Zone Classifications
+- 🔴 **Critical Risk**: Immediate evacuation required
+- 🟠 **High Risk**: Enhanced monitoring and preparation
+- 🟡 **Medium Risk**: Regular assessment and monitoring
+- 🟢 **Safe Zone**: Stable geological conditions
+
+## 📁 Project Structure
+
+```
+Rockfall-Prediction-System/
+├── 📄 main.py                 # FastAPI backend application
+├── 📄 requirements.txt        # Python dependencies
+├── 📄 .gitignore             # Git ignore rules
+├── 📄 README.md              # Project documentation
+├── 📁 myenv/                 # Python virtual environment (not in repo)
+└── 📁 frontend/              # React frontend application
+    ├── 📁 public/            # Static assets
+    ├── 📁 src/               # React source code
+    │   ├── 📁 components/    # React components
+    │   │   ├── 📄 Navbar.js           # Enhanced navigation bar
+    │   │   ├── 📄 MapSection.js       # Interactive geological map
+    │   │   ├── 📄 LeftSidebar.js      # Risk monitoring panel
+    │   │   ├── 📄 RightSidebar.js     # Resource management panel
+    │   │   └── 📄 RockfallDashboard.js # Main dashboard layout
+    │   ├── 📄 App.js         # Main React application
+    │   ├── 📄 App.css        # Enhanced styling
+    │   └── 📄 index.js       # React entry point
+    ├── 📄 package.json       # Node.js dependencies
+    └── 📄 tailwind.config.js # Tailwind CSS configuration
 ```
 
-The API will be available at: http://127.0.0.1:8000
+## 🚧 Development Status
 
-### 2. Frontend Setup
+- ✅ **Backend API**: Fully functional FastAPI server
+- ✅ **Frontend Dashboard**: Complete React application with enhanced UI
+- ✅ **Map Integration**: Interactive Leaflet map with Indian coordinates
+- ✅ **Real-time Monitoring**: Live status indicators and risk assessment
+- 🔄 **AI Models**: In development for advanced prediction capabilities
+- 📋 **Database Integration**: Planned for persistent data storage
 
-```powershell
-# Navigate to frontend directory
-cd frontend
+## 🤝 Contributing
 
-# Install Node.js dependencies
-npm install
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
-# Start React development server
-npm start
-```
+## 🆘 Support
 
-The React app will be available at: http://localhost:3000
+For support and questions:
+- Create an issue on GitHub
+- Email: lakshya1410@example.com
+- Documentation: Available in this README
 
-## API Endpoints
+---
 
-- `GET /` - API status
-- `GET /api/active-risks` - Current rockfall risks
-- `GET /api/emergency-messages` - NLP-processed alerts
-- `GET /api/resource-allocation` - Resource status
-- `GET /api/recommended-actions` - AI recommendations
-- `GET /api/system-status` - System component status
+**Built with ❤️ for geological safety and disaster prevention**
 
-## Project Structure
-
-```
-ROCKFALL/
-├── main.py                 # FastAPI backend
-├── requirements.txt        # Python dependencies
-├── myenv/                 # Python virtual environment
-├── frontend/              # React application
-│   ├── src/
-│   │   ├── components/    # React components
-│   │   ├── App.js         # Main app component
-│   │   └── index.js       # Entry point
-│   ├── public/            # Static files
-│   └── package.json       # Node.js dependencies
-└── README.md              # This file
-```
-
-## Usage
-
-1. Start the FastAPI backend server
-2. Start the React frontend development server
-3. Open http://localhost:3000 in your browser
-4. View real-time disaster monitoring dashboard
-
-## Dashboard Components
-
-- **Top Navbar**: System status indicators and navigation tabs
-- **Left Sidebar**: Active disaster zones and emergency messages
-- **Center Map**: Interactive risk visualization with Leaflet.js
-- **Right Sidebar**: Resource allocation and AI recommendations
-
-The dashboard automatically updates with real-time data and provides a comprehensive view of the disaster response situation.
+🌍 **Repository**: https://github.com/lakshya1410/Rockfall-Prediction-System.git
